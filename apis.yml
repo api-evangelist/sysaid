@@ -44,6 +44,10 @@ apis:
         url: https://developers.sysaid.com/docs/authentication-guide
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/sysaid
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/sysaid-technologies-ltd
   - type: Website
     url: https://www.sysaid.com
   - type: Documentation
