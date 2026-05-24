@@ -58,6 +58,8 @@ common:
     url: https://www.sysaid.com/free-trial
   - type: Community
     url: https://community.sysaid.com/
+  - type: LLMsTxt
+    url: https://sysaid.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
