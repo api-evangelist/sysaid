@@ -1,0 +1,646 @@
+openapi: 3.1.0
+info:
+  title: SysAid REST API
+  description: >-
+    REST API for SysAid ITSM. Manage service records (incidents, requests,
+    problems, changes), users (agents and end users), groups, companies,
+    assets, configuration items (CIs), templates, attachments, webhooks
+    (beta), and license manager records. Authentication uses Client
+    Credentials to mint short-lived application access tokens. Source:
+    https://developers.sysaid.com/
+  version: "1.0"
+  contact:
+    name: SysAid
+    url: https://developers.sysaid.com/
+servers:
+  - url: https://your-account.sysaidit.com
+    description: SysAid tenant base URL (replace your-account)
+security:
+  - BearerAuth: []
+tags:
+  - name: Auth
+  - name: Agents
+  - name: EndUsers
+  - name: Groups
+  - name: ServiceRecords
+  - name: Activities
+  - name: ActionItems
+  - name: RelatedItems
+  - name: Templates
+  - name: Attachments
+  - name: Companies
+  - name: Assets
+  - name: CIs
+  - name: Webhooks
+  - name: LicenseManager
+  - name: Utilities
+paths:
+  /createapplicationkey:
+    post:
+      tags: [Auth]
+      summary: Create app credentials
+      operationId: createApplicationKey
+      responses:
+        "201":
+          description: Created
+  /generateaccesstoken:
+    post:
+      tags: [Auth]
+      summary: Obtain access token
+      operationId: generateAccessToken
+      responses:
+        "200":
+          description: OK
+  /deleteapplicationkey:
+    delete:
+      tags: [Auth]
+      summary: Remove app credentials
+      operationId: deleteApplicationKey
+      responses:
+        "204":
+          description: Deleted
+  /getapplicationsbyaccountid:
+    get:
+      tags: [Auth]
+      summary: List app keys by account
+      operationId: getApplicationsByAccountId
+      responses:
+        "200":
+          description: OK
+  /getagents:
+    get:
+      tags: [Agents]
+      summary: List agents (paginated)
+      operationId: getAgents
+      responses:
+        "200":
+          description: OK
+  /createagent:
+    post:
+      tags: [Agents]
+      summary: Create new agent
+      operationId: createAgent
+      responses:
+        "201":
+          description: Created
+  /getagent:
+    get:
+      tags: [Agents]
+      summary: Retrieve agent by ID
+      operationId: getAgent
+      responses:
+        "200":
+          description: OK
+  /updateagent:
+    put:
+      tags: [Agents]
+      summary: Update agent details
+      operationId: updateAgent
+      responses:
+        "200":
+          description: OK
+  /deleteagent:
+    delete:
+      tags: [Agents]
+      summary: Remove agent permanently
+      operationId: deleteAgent
+      responses:
+        "204":
+          description: Deleted
+  /addagenttogroups:
+    post:
+      tags: [Agents]
+      summary: Add agent to groups
+      operationId: addAgentToGroups
+      responses:
+        "200":
+          description: OK
+  /removeagentfromgroups:
+    post:
+      tags: [Agents]
+      summary: Remove agent from groups
+      operationId: removeAgentFromGroups
+      responses:
+        "200":
+          description: OK
+  /convertagenttoenduser:
+    post:
+      tags: [Agents]
+      summary: Convert agent to end user
+      operationId: convertAgentToEndUser
+      responses:
+        "200":
+          description: OK
+  /getendusers:
+    get:
+      tags: [EndUsers]
+      summary: List end users (paginated)
+      operationId: getEndUsers
+      responses:
+        "200":
+          description: OK
+  /createenduser:
+    post:
+      tags: [EndUsers]
+      summary: Create new end user
+      operationId: createEndUser
+      responses:
+        "201":
+          description: Created
+  /getenduser:
+    get:
+      tags: [EndUsers]
+      summary: Retrieve end user by ID
+      operationId: getEndUser
+      responses:
+        "200":
+          description: OK
+  /updateenduser:
+    put:
+      tags: [EndUsers]
+      summary: Update end user details
+      operationId: updateEndUser
+      responses:
+        "200":
+          description: OK
+  /deleteenduser:
+    delete:
+      tags: [EndUsers]
+      summary: Remove end user permanently
+      operationId: deleteEndUser
+      responses:
+        "204":
+          description: Deleted
+  /addendusertogroups:
+    post:
+      tags: [EndUsers]
+      summary: Add end user to groups
+      operationId: addEndUserToGroups
+      responses:
+        "200":
+          description: OK
+  /removeenduserfromgroups:
+    post:
+      tags: [EndUsers]
+      summary: Remove end user from groups
+      operationId: removeEndUserFromGroups
+      responses:
+        "200":
+          description: OK
+  /convertendusertoagent:
+    post:
+      tags: [EndUsers]
+      summary: Convert end user to agent
+      operationId: convertEndUserToAgent
+      responses:
+        "200":
+          description: OK
+  /getgroups:
+    get:
+      tags: [Groups]
+      summary: List all groups (paginated)
+      operationId: getGroups
+      responses:
+        "200":
+          description: OK
+  /creategroup:
+    post:
+      tags: [Groups]
+      summary: Create new group
+      operationId: createGroup
+      responses:
+        "201":
+          description: Created
+  /getgroup:
+    get:
+      tags: [Groups]
+      summary: Retrieve group by ID
+      operationId: getGroup
+      responses:
+        "200":
+          description: OK
+  /getgroupmembers:
+    get:
+      tags: [Groups]
+      summary: List group members
+      operationId: getGroupMembers
+      responses:
+        "200":
+          description: OK
+  /createservicerecord:
+    post:
+      tags: [ServiceRecords]
+      summary: Create ticket
+      operationId: createServiceRecord
+      responses:
+        "201":
+          description: Created
+  /getservicerecordbyid:
+    get:
+      tags: [ServiceRecords]
+      summary: Retrieve ticket details
+      operationId: getServiceRecordById
+      responses:
+        "200":
+          description: OK
+  /updateservicerecord:
+    put:
+      tags: [ServiceRecords]
+      summary: Update ticket
+      operationId: updateServiceRecord
+      responses:
+        "200":
+          description: OK
+  /searchservicerecords:
+    get:
+      tags: [ServiceRecords]
+      summary: Search tickets by parameters
+      operationId: searchServiceRecords
+      responses:
+        "200":
+          description: OK
+  /deleteservicerecord:
+    delete:
+      tags: [ServiceRecords]
+      summary: Remove ticket permanently
+      operationId: deleteServiceRecord
+      responses:
+        "204":
+          description: Deleted
+  /resolveservicerecord:
+    post:
+      tags: [ServiceRecords]
+      summary: Mark ticket resolved
+      operationId: resolveServiceRecord
+      responses:
+        "200":
+          description: OK
+  /addservicerecordactivity:
+    post:
+      tags: [Activities]
+      summary: Log time-tracked activity
+      operationId: addServiceRecordActivity
+      responses:
+        "201":
+          description: Created
+  /searchservicerecordactivities:
+    get:
+      tags: [Activities]
+      summary: Retrieve activities (paginated)
+      operationId: searchServiceRecordActivities
+      responses:
+        "200":
+          description: OK
+  /addservicerecordnote:
+    post:
+      tags: [Activities]
+      summary: Add internal or public note
+      operationId: addServiceRecordNote
+      responses:
+        "201":
+          description: Created
+  /sendservicerecordmessage:
+    post:
+      tags: [Activities]
+      summary: Send email notification
+      operationId: sendServiceRecordMessage
+      responses:
+        "200":
+          description: OK
+  /getservicerecordactionitems:
+    get:
+      tags: [ActionItems]
+      summary: List action items
+      operationId: getServiceRecordActionItems
+      responses:
+        "200":
+          description: OK
+  /updateservicerecordactionitemstatus:
+    put:
+      tags: [ActionItems]
+      summary: Update action item status
+      operationId: updateServiceRecordActionItemStatus
+      responses:
+        "200":
+          description: OK
+  /addadhocactionitem:
+    post:
+      tags: [ActionItems]
+      summary: Create ad-hoc action item
+      operationId: addAdhocActionItem
+      responses:
+        "201":
+          description: Created
+  /deleteadhocactionitem:
+    delete:
+      tags: [ActionItems]
+      summary: Remove action item
+      operationId: deleteAdhocActionItem
+      responses:
+        "204":
+          description: Deleted
+  /getservicerecordrelateditems:
+    get:
+      tags: [RelatedItems]
+      summary: List related items
+      operationId: getServiceRecordRelatedItems
+      responses:
+        "200":
+          description: OK
+  /addkbarticletoservicerecord:
+    post:
+      tags: [RelatedItems]
+      summary: Link KB articles
+      operationId: addKbArticleToServiceRecord
+      responses:
+        "200":
+          description: OK
+  /deleteservicerecordknowledgebaserelateditem:
+    delete:
+      tags: [RelatedItems]
+      summary: Unlink KB articles
+      operationId: deleteServiceRecordKnowledgebaseRelatedItem
+      responses:
+        "204":
+          description: Deleted
+  /getsrtemplatebysrid:
+    get:
+      tags: [Templates]
+      summary: Get template by service record ID
+      operationId: getSrTemplateBySrId
+      responses:
+        "200":
+          description: OK
+  /getsrtemplatebyid:
+    get:
+      tags: [Templates]
+      summary: Get template by ID
+      operationId: getSrTemplateById
+      responses:
+        "200":
+          description: OK
+  /searchsrtemplates:
+    get:
+      tags: [Templates]
+      summary: Search templates
+      operationId: searchSrTemplates
+      responses:
+        "200":
+          description: OK
+  /generateattachmentpresignedurl:
+    post:
+      tags: [Attachments]
+      summary: Generate upload URL
+      operationId: generateAttachmentPresignedUrl
+      responses:
+        "200":
+          description: OK
+  /createattachment:
+    post:
+      tags: [Attachments]
+      summary: Finalize attachment creation
+      operationId: createAttachment
+      responses:
+        "201":
+          description: Created
+  /getcompanies:
+    get:
+      tags: [Companies]
+      summary: List companies
+      operationId: getCompanies
+      responses:
+        "200":
+          description: OK
+  /createcompany:
+    post:
+      tags: [Companies]
+      summary: Create company
+      operationId: createCompany
+      responses:
+        "201":
+          description: Created
+  /getcompanybyid:
+    get:
+      tags: [Companies]
+      summary: Retrieve company by ID
+      operationId: getCompanyById
+      responses:
+        "200":
+          description: OK
+  /updatecompanybyid:
+    put:
+      tags: [Companies]
+      summary: Update company
+      operationId: updateCompanyById
+      responses:
+        "200":
+          description: OK
+  /deletecompanybyid:
+    delete:
+      tags: [Companies]
+      summary: Remove company
+      operationId: deleteCompanyById
+      responses:
+        "204":
+          description: Deleted
+  /getassets:
+    get:
+      tags: [Assets]
+      summary: List assets
+      operationId: getAssets
+      responses:
+        "200":
+          description: OK
+  /createasset:
+    post:
+      tags: [Assets]
+      summary: Create asset
+      operationId: createAsset
+      responses:
+        "201":
+          description: Created
+  /getassetbyid:
+    get:
+      tags: [Assets]
+      summary: Retrieve asset by ID
+      operationId: getAssetById
+      responses:
+        "200":
+          description: OK
+  /updateasset:
+    put:
+      tags: [Assets]
+      summary: Update asset
+      operationId: updateAsset
+      responses:
+        "200":
+          description: OK
+  /deleteasset:
+    delete:
+      tags: [Assets]
+      summary: Remove asset
+      operationId: deleteAsset
+      responses:
+        "204":
+          description: Deleted
+  /getcis:
+    get:
+      tags: [CIs]
+      summary: List CIs
+      operationId: getCis
+      responses:
+        "200":
+          description: OK
+  /createci:
+    post:
+      tags: [CIs]
+      summary: Create CI
+      operationId: createCi
+      responses:
+        "201":
+          description: Created
+  /getcibyid:
+    get:
+      tags: [CIs]
+      summary: Retrieve CI by ID
+      operationId: getCiById
+      responses:
+        "200":
+          description: OK
+  /updatecibyid:
+    put:
+      tags: [CIs]
+      summary: Update CI
+      operationId: updateCiById
+      responses:
+        "200":
+          description: OK
+  /deletecibyid:
+    delete:
+      tags: [CIs]
+      summary: Remove CI
+      operationId: deleteCiById
+      responses:
+        "204":
+          description: Deleted
+  /getcitypes:
+    get:
+      tags: [CIs]
+      summary: List CI types
+      operationId: getCiTypes
+      responses:
+        "200":
+          description: OK
+  /getcirelationsbyid:
+    get:
+      tags: [CIs]
+      summary: Retrieve CI relations
+      operationId: getCiRelationsById
+      responses:
+        "200":
+          description: OK
+  /createcirelation:
+    post:
+      tags: [CIs]
+      summary: Create CI relation
+      operationId: createCiRelation
+      responses:
+        "201":
+          description: Created
+  /deletecirelation:
+    delete:
+      tags: [CIs]
+      summary: Remove CI relation
+      operationId: deleteCiRelation
+      responses:
+        "204":
+          description: Deleted
+  /createwebhook:
+    post:
+      tags: [Webhooks]
+      summary: Create webhook subscription
+      operationId: createWebhook
+      responses:
+        "201":
+          description: Created
+  /getwebhooksbyaccountid:
+    get:
+      tags: [Webhooks]
+      summary: List webhooks
+      operationId: getWebhooksByAccountId
+      responses:
+        "200":
+          description: OK
+  /simulatewebhookevent:
+    post:
+      tags: [Webhooks]
+      summary: Test webhook
+      operationId: simulateWebhookEvent
+      responses:
+        "200":
+          description: OK
+  /getwebhooksubscriberbyid:
+    get:
+      tags: [Webhooks]
+      summary: Retrieve webhook details
+      operationId: getWebhookSubscriberById
+      responses:
+        "200":
+          description: OK
+  /deletewebhooksubscriberbyid:
+    delete:
+      tags: [Webhooks]
+      summary: Remove webhook
+      operationId: deleteWebhookSubscriberById
+      responses:
+        "204":
+          description: Deleted
+  /getlicensemanagercontracts:
+    get:
+      tags: [LicenseManager]
+      summary: List license contracts
+      operationId: getLicenseManagerContracts
+      responses:
+        "200":
+          description: OK
+  /createlicensemanagercontract:
+    post:
+      tags: [LicenseManager]
+      summary: Create license contract
+      operationId: createLicenseManagerContract
+      responses:
+        "201":
+          description: Created
+  /getindexes:
+    get:
+      tags: [Utilities]
+      summary: Retrieve available field indexes
+      operationId: getIndexes
+      responses:
+        "200":
+          description: OK
+  /getcustomfieldsinfolist:
+    get:
+      tags: [Utilities]
+      summary: List custom fields
+      operationId: getCustomFieldsInfoList
+      responses:
+        "200":
+          description: OK
+  /getcategories:
+    get:
+      tags: [Utilities]
+      summary: Get category hierarchy
+      operationId: getCategories
+      responses:
+        "200":
+          description: OK
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: >-
+        OAuth 2.0 Client Credentials grant: exchange client_id and
+        client_secret at /generateaccesstoken for a short-lived access token
+        (default 24h), then pass as "Authorization: Bearer <token>".
