@@ -1,0 +1,969 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Auth",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create app credentials",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createapplicationkey"
+          },
+          "docs": "Create app credentials"
+        },
+        {
+          "info": {
+            "name": "Obtain access token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/generateaccesstoken"
+          },
+          "docs": "Obtain access token"
+        },
+        {
+          "info": {
+            "name": "Remove app credentials",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteapplicationkey"
+          },
+          "docs": "Remove app credentials"
+        },
+        {
+          "info": {
+            "name": "List app keys by account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getapplicationsbyaccountid"
+          },
+          "docs": "List app keys by account"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Agents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List agents (paginated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getagents"
+          },
+          "docs": "List agents (paginated)"
+        },
+        {
+          "info": {
+            "name": "Create new agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createagent"
+          },
+          "docs": "Create new agent"
+        },
+        {
+          "info": {
+            "name": "Retrieve agent by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getagent"
+          },
+          "docs": "Retrieve agent by ID"
+        },
+        {
+          "info": {
+            "name": "Update agent details",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateagent"
+          },
+          "docs": "Update agent details"
+        },
+        {
+          "info": {
+            "name": "Remove agent permanently",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteagent"
+          },
+          "docs": "Remove agent permanently"
+        },
+        {
+          "info": {
+            "name": "Add agent to groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addagenttogroups"
+          },
+          "docs": "Add agent to groups"
+        },
+        {
+          "info": {
+            "name": "Remove agent from groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/removeagentfromgroups"
+          },
+          "docs": "Remove agent from groups"
+        },
+        {
+          "info": {
+            "name": "Convert agent to end user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/convertagenttoenduser"
+          },
+          "docs": "Convert agent to end user"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "EndUsers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List end users (paginated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getendusers"
+          },
+          "docs": "List end users (paginated)"
+        },
+        {
+          "info": {
+            "name": "Create new end user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createenduser"
+          },
+          "docs": "Create new end user"
+        },
+        {
+          "info": {
+            "name": "Retrieve end user by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getenduser"
+          },
+          "docs": "Retrieve end user by ID"
+        },
+        {
+          "info": {
+            "name": "Update end user details",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateenduser"
+          },
+          "docs": "Update end user details"
+        },
+        {
+          "info": {
+            "name": "Remove end user permanently",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteenduser"
+          },
+          "docs": "Remove end user permanently"
+        },
+        {
+          "info": {
+            "name": "Add end user to groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addendusertogroups"
+          },
+          "docs": "Add end user to groups"
+        },
+        {
+          "info": {
+            "name": "Remove end user from groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/removeenduserfromgroups"
+          },
+          "docs": "Remove end user from groups"
+        },
+        {
+          "info": {
+            "name": "Convert end user to agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/convertendusertoagent"
+          },
+          "docs": "Convert end user to agent"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all groups (paginated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getgroups"
+          },
+          "docs": "List all groups (paginated)"
+        },
+        {
+          "info": {
+            "name": "Create new group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/creategroup"
+          },
+          "docs": "Create new group"
+        },
+        {
+          "info": {
+            "name": "Retrieve group by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getgroup"
+          },
+          "docs": "Retrieve group by ID"
+        },
+        {
+          "info": {
+            "name": "List group members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getgroupmembers"
+          },
+          "docs": "List group members"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "ServiceRecords",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createservicerecord"
+          },
+          "docs": "Create ticket"
+        },
+        {
+          "info": {
+            "name": "Retrieve ticket details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getservicerecordbyid"
+          },
+          "docs": "Retrieve ticket details"
+        },
+        {
+          "info": {
+            "name": "Update ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateservicerecord"
+          },
+          "docs": "Update ticket"
+        },
+        {
+          "info": {
+            "name": "Search tickets by parameters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/searchservicerecords"
+          },
+          "docs": "Search tickets by parameters"
+        },
+        {
+          "info": {
+            "name": "Remove ticket permanently",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteservicerecord"
+          },
+          "docs": "Remove ticket permanently"
+        },
+        {
+          "info": {
+            "name": "Mark ticket resolved",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/resolveservicerecord"
+          },
+          "docs": "Mark ticket resolved"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Activities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Log time-tracked activity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addservicerecordactivity"
+          },
+          "docs": "Log time-tracked activity"
+        },
+        {
+          "info": {
+            "name": "Retrieve activities (paginated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/searchservicerecordactivities"
+          },
+          "docs": "Retrieve activities (paginated)"
+        },
+        {
+          "info": {
+            "name": "Add internal or public note",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addservicerecordnote"
+          },
+          "docs": "Add internal or public note"
+        },
+        {
+          "info": {
+            "name": "Send email notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/sendservicerecordmessage"
+          },
+          "docs": "Send email notification"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "ActionItems",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List action items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getservicerecordactionitems"
+          },
+          "docs": "List action items"
+        },
+        {
+          "info": {
+            "name": "Update action item status",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateservicerecordactionitemstatus"
+          },
+          "docs": "Update action item status"
+        },
+        {
+          "info": {
+            "name": "Create ad-hoc action item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addadhocactionitem"
+          },
+          "docs": "Create ad-hoc action item"
+        },
+        {
+          "info": {
+            "name": "Remove action item",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteadhocactionitem"
+          },
+          "docs": "Remove action item"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "RelatedItems",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List related items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getservicerecordrelateditems"
+          },
+          "docs": "List related items"
+        },
+        {
+          "info": {
+            "name": "Link KB articles",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addkbarticletoservicerecord"
+          },
+          "docs": "Link KB articles"
+        },
+        {
+          "info": {
+            "name": "Unlink KB articles",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteservicerecordknowledgebaserelateditem"
+          },
+          "docs": "Unlink KB articles"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get template by service record ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getsrtemplatebysrid"
+          },
+          "docs": "Get template by service record ID"
+        },
+        {
+          "info": {
+            "name": "Get template by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getsrtemplatebyid"
+          },
+          "docs": "Get template by ID"
+        },
+        {
+          "info": {
+            "name": "Search templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/searchsrtemplates"
+          },
+          "docs": "Search templates"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Attachments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Generate upload URL",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/generateattachmentpresignedurl"
+          },
+          "docs": "Generate upload URL"
+        },
+        {
+          "info": {
+            "name": "Finalize attachment creation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createattachment"
+          },
+          "docs": "Finalize attachment creation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Companies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcompanies"
+          },
+          "docs": "List companies"
+        },
+        {
+          "info": {
+            "name": "Create company",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createcompany"
+          },
+          "docs": "Create company"
+        },
+        {
+          "info": {
+            "name": "Retrieve company by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcompanybyid"
+          },
+          "docs": "Retrieve company by ID"
+        },
+        {
+          "info": {
+            "name": "Update company",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updatecompanybyid"
+          },
+          "docs": "Update company"
+        },
+        {
+          "info": {
+            "name": "Remove company",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deletecompanybyid"
+          },
+          "docs": "Remove company"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getassets"
+          },
+          "docs": "List assets"
+        },
+        {
+          "info": {
+            "name": "Create asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createasset"
+          },
+          "docs": "Create asset"
+        },
+        {
+          "info": {
+            "name": "Retrieve asset by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getassetbyid"
+          },
+          "docs": "Retrieve asset by ID"
+        },
+        {
+          "info": {
+            "name": "Update asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateasset"
+          },
+          "docs": "Update asset"
+        },
+        {
+          "info": {
+            "name": "Remove asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteasset"
+          },
+          "docs": "Remove asset"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "CIs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List CIs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcis"
+          },
+          "docs": "List CIs"
+        },
+        {
+          "info": {
+            "name": "Create CI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createci"
+          },
+          "docs": "Create CI"
+        },
+        {
+          "info": {
+            "name": "Retrieve CI by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcibyid"
+          },
+          "docs": "Retrieve CI by ID"
+        },
+        {
+          "info": {
+            "name": "Update CI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updatecibyid"
+          },
+          "docs": "Update CI"
+        },
+        {
+          "info": {
+            "name": "Remove CI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deletecibyid"
+          },
+          "docs": "Remove CI"
+        },
+        {
+          "info": {
+            "name": "List CI types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcitypes"
+          },
+          "docs": "List CI types"
+        },
+        {
+          "info": {
+            "name": "Retrieve CI relations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcirelationsbyid"
+          },
+          "docs": "Retrieve CI relations"
+        },
+        {
+          "info": {
+            "name": "Create CI relation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createcirelation"
+          },
+          "docs": "Create CI relation"
+        },
+        {
+          "info": {
+            "name": "Remove CI relation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deletecirelation"
+          },
+          "docs": "Remove CI relation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create webhook subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createwebhook"
+          },
+          "docs": "Create webhook subscription"
+        },
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getwebhooksbyaccountid"
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Test webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/simulatewebhookevent"
+          },
+          "docs": "Test webhook"
+        },
+        {
+          "info": {
+            "name": "Retrieve webhook details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getwebhooksubscriberbyid"
+          },
+          "docs": "Retrieve webhook details"
+        },
+        {
+          "info": {
+            "name": "Remove webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deletewebhooksubscriberbyid"
+          },
+          "docs": "Remove webhook"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "LicenseManager",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List license contracts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getlicensemanagercontracts"
+          },
+          "docs": "List license contracts"
+        },
+        {
+          "info": {
+            "name": "Create license contract",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createlicensemanagercontract"
+          },
+          "docs": "Create license contract"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Utilities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve available field indexes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getindexes"
+          },
+          "docs": "Retrieve available field indexes"
+        },
+        {
+          "info": {
+            "name": "List custom fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcustomfieldsinfolist"
+          },
+          "docs": "List custom fields"
+        },
+        {
+          "info": {
+            "name": "Get category hierarchy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcategories"
+          },
+          "docs": "Get category hierarchy"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
