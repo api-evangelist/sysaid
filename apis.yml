@@ -54,11 +54,11 @@ common:
     url: https://documentation.sysaid.com/
   - type: Pricing
     url: https://www.sysaid.com/pricing
-  - type: SignUp
+  - type: Signup
     url: https://www.sysaid.com/free-trial
   - type: Community
     url: https://community.sysaid.com/
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://sysaid.com/llms.txt
 maintainers:
   - FN: Kin Lane
