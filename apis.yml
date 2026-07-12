@@ -44,6 +44,12 @@ apis:
         url: https://developers.sysaid.com/docs/authentication-guide
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/sysaid-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/sysaid-domain-security.yml
+  - type: Authentication
+    url: authentication/sysaid-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/sysaid
   - type: LinkedIn
@@ -60,6 +66,8 @@ common:
     url: https://community.sysaid.com/
   - type: LlmsText
     url: https://sysaid.com/llms.txt
+  - url: https://www.sysaid.com/feed
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
