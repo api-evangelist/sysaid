@@ -44,6 +44,8 @@ apis:
         url: https://developers.sysaid.com/docs/authentication-guide
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/sysaid-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/sysaid-vulnerability-disclosure.yml
   - type: DomainSecurity
