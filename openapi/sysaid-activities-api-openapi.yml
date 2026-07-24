@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  title: SysAid REST ActionItems Activities API
+  description: 'REST API for SysAid ITSM. Manage service records (incidents, requests, problems, changes), users (agents and end users), groups, companies, assets, configuration items (CIs), templates, attachments, webhooks (beta), and license manager records. Authentication uses Client Credentials to mint short-lived application access tokens. Source: https://developers.sysaid.com/'
+  version: '1.0'
+  contact:
+    name: SysAid
+    url: https://developers.sysaid.com/
+servers:
+- url: https://your-account.sysaidit.com
+  description: SysAid tenant base URL (replace your-account)
+security:
+- BearerAuth: []
+tags:
+- name: Activities
+paths:
+  /addservicerecordactivity:
+    post:
+      tags:
+      - Activities
+      summary: Log time-tracked activity
+      operationId: addServiceRecordActivity
+      responses:
+        '201':
+          description: Created
+  /searchservicerecordactivities:
+    get:
+      tags:
+      - Activities
+      summary: Retrieve activities (paginated)
+      operationId: searchServiceRecordActivities
+      responses:
+        '200':
+          description: OK
+  /addservicerecordnote:
+    post:
+      tags:
+      - Activities
+      summary: Add internal or public note
+      operationId: addServiceRecordNote
+      responses:
+        '201':
+          description: Created
+  /sendservicerecordmessage:
+    post:
+      tags:
+      - Activities
+      summary: Send email notification
+      operationId: sendServiceRecordMessage
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'OAuth 2.0 Client Credentials grant: exchange client_id and client_secret at /generateaccesstoken for a short-lived access token (default 24h), then pass as "Authorization: Bearer <token>".'

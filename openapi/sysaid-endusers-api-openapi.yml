@@ -1,0 +1,94 @@
+openapi: 3.1.0
+info:
+  title: SysAid REST ActionItems EndUsers API
+  description: 'REST API for SysAid ITSM. Manage service records (incidents, requests, problems, changes), users (agents and end users), groups, companies, assets, configuration items (CIs), templates, attachments, webhooks (beta), and license manager records. Authentication uses Client Credentials to mint short-lived application access tokens. Source: https://developers.sysaid.com/'
+  version: '1.0'
+  contact:
+    name: SysAid
+    url: https://developers.sysaid.com/
+servers:
+- url: https://your-account.sysaidit.com
+  description: SysAid tenant base URL (replace your-account)
+security:
+- BearerAuth: []
+tags:
+- name: EndUsers
+paths:
+  /getendusers:
+    get:
+      tags:
+      - EndUsers
+      summary: List end users (paginated)
+      operationId: getEndUsers
+      responses:
+        '200':
+          description: OK
+  /createenduser:
+    post:
+      tags:
+      - EndUsers
+      summary: Create new end user
+      operationId: createEndUser
+      responses:
+        '201':
+          description: Created
+  /getenduser:
+    get:
+      tags:
+      - EndUsers
+      summary: Retrieve end user by ID
+      operationId: getEndUser
+      responses:
+        '200':
+          description: OK
+  /updateenduser:
+    put:
+      tags:
+      - EndUsers
+      summary: Update end user details
+      operationId: updateEndUser
+      responses:
+        '200':
+          description: OK
+  /deleteenduser:
+    delete:
+      tags:
+      - EndUsers
+      summary: Remove end user permanently
+      operationId: deleteEndUser
+      responses:
+        '204':
+          description: Deleted
+  /addendusertogroups:
+    post:
+      tags:
+      - EndUsers
+      summary: Add end user to groups
+      operationId: addEndUserToGroups
+      responses:
+        '200':
+          description: OK
+  /removeenduserfromgroups:
+    post:
+      tags:
+      - EndUsers
+      summary: Remove end user from groups
+      operationId: removeEndUserFromGroups
+      responses:
+        '200':
+          description: OK
+  /convertendusertoagent:
+    post:
+      tags:
+      - EndUsers
+      summary: Convert end user to agent
+      operationId: convertEndUserToAgent
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'OAuth 2.0 Client Credentials grant: exchange client_id and client_secret at /generateaccesstoken for a short-lived access token (default 24h), then pass as "Authorization: Bearer <token>".'

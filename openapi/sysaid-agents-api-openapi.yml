@@ -1,0 +1,94 @@
+openapi: 3.1.0
+info:
+  title: SysAid REST ActionItems Agents API
+  description: 'REST API for SysAid ITSM. Manage service records (incidents, requests, problems, changes), users (agents and end users), groups, companies, assets, configuration items (CIs), templates, attachments, webhooks (beta), and license manager records. Authentication uses Client Credentials to mint short-lived application access tokens. Source: https://developers.sysaid.com/'
+  version: '1.0'
+  contact:
+    name: SysAid
+    url: https://developers.sysaid.com/
+servers:
+- url: https://your-account.sysaidit.com
+  description: SysAid tenant base URL (replace your-account)
+security:
+- BearerAuth: []
+tags:
+- name: Agents
+paths:
+  /getagents:
+    get:
+      tags:
+      - Agents
+      summary: List agents (paginated)
+      operationId: getAgents
+      responses:
+        '200':
+          description: OK
+  /createagent:
+    post:
+      tags:
+      - Agents
+      summary: Create new agent
+      operationId: createAgent
+      responses:
+        '201':
+          description: Created
+  /getagent:
+    get:
+      tags:
+      - Agents
+      summary: Retrieve agent by ID
+      operationId: getAgent
+      responses:
+        '200':
+          description: OK
+  /updateagent:
+    put:
+      tags:
+      - Agents
+      summary: Update agent details
+      operationId: updateAgent
+      responses:
+        '200':
+          description: OK
+  /deleteagent:
+    delete:
+      tags:
+      - Agents
+      summary: Remove agent permanently
+      operationId: deleteAgent
+      responses:
+        '204':
+          description: Deleted
+  /addagenttogroups:
+    post:
+      tags:
+      - Agents
+      summary: Add agent to groups
+      operationId: addAgentToGroups
+      responses:
+        '200':
+          description: OK
+  /removeagentfromgroups:
+    post:
+      tags:
+      - Agents
+      summary: Remove agent from groups
+      operationId: removeAgentFromGroups
+      responses:
+        '200':
+          description: OK
+  /convertagenttoenduser:
+    post:
+      tags:
+      - Agents
+      summary: Convert agent to end user
+      operationId: convertAgentToEndUser
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'OAuth 2.0 Client Credentials grant: exchange client_id and client_secret at /generateaccesstoken for a short-lived access token (default 24h), then pass as "Authorization: Bearer <token>".'
