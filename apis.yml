@@ -8,7 +8,19 @@ description: >-
   SysAid exposes a REST API with Client Credentials authentication issuing
   short-lived tokens for managing service records, users, assets, and more.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sysaid.png
 tags:
   - ITSM
   - Help Desk
@@ -22,27 +34,185 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: sysaid:rest-api
-    name: SysAid REST API
-    description: >-
-      REST API for managing SysAid service records (incidents, requests,
-      problems, changes), users, assets, and SLAs. Authentication uses
-      Client Credentials to mint short-lived application access tokens
-      (default 24h lifetime) via the /v1/application-keys endpoint.
-    humanURL: https://developers.sysaid.com/docs/authentication-guide
-    baseURL: https://your-account.sysaidit.com
-    tags:
-      - Service Records
-      - Tickets
-      - Assets
-      - Users
-      - Workflows
-    properties:
-      - type: Documentation
-        url: https://documentation.sysaid.com/docs/rest-api-guide
-      - type: Authentication Guide
-        url: https://developers.sysaid.com/docs/authentication-guide
-
+- aid: sysaid:rest-api
+  name: SysAid REST API
+  description: >-
+    REST API for managing SysAid service records (incidents, requests, problems, changes), users, assets,
+    and SLAs. Authentication uses Client Credentials to mint short-lived application access tokens (default
+    24h lifetime) via the /v1/application-keys endpoint.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Service Records
+  - Tickets
+  - Assets
+  - Users
+  - Workflows
+  properties:
+  - type: Documentation
+    url: https://documentation.sysaid.com/docs/rest-api-guide
+  - type: Authentication Guide
+    url: https://developers.sysaid.com/docs/authentication-guide
+- aid: sysaid:sysaid-actionitems-api
+  name: SysAid ActionItems API
+  description: The ActionItems API from SysAid — 4 operation(s) for actionitems.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - ActionItems
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-actionitems-api-openapi.yml
+- aid: sysaid:sysaid-activities-api
+  name: SysAid Activities API
+  description: The Activities API from SysAid — 4 operation(s) for activities.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Activities
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-activities-api-openapi.yml
+- aid: sysaid:sysaid-agents-api
+  name: SysAid Agents API
+  description: The Agents API from SysAid — 8 operation(s) for agents.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Agents
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-agents-api-openapi.yml
+- aid: sysaid:sysaid-assets-api
+  name: SysAid Assets API
+  description: The Assets API from SysAid — 5 operation(s) for assets.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Assets
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-assets-api-openapi.yml
+- aid: sysaid:sysaid-attachments-api
+  name: SysAid Attachments API
+  description: The Attachments API from SysAid — 2 operation(s) for attachments.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Attachments
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-attachments-api-openapi.yml
+- aid: sysaid:sysaid-auth-api
+  name: SysAid Auth API
+  description: The Auth API from SysAid — 4 operation(s) for auth.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Auth
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-auth-api-openapi.yml
+- aid: sysaid:sysaid-cis-api
+  name: SysAid CIs API
+  description: The CIs API from SysAid — 9 operation(s) for cis.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - CIs
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-cis-api-openapi.yml
+- aid: sysaid:sysaid-companies-api
+  name: SysAid Companies API
+  description: The Companies API from SysAid — 5 operation(s) for companies.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Companies
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-companies-api-openapi.yml
+- aid: sysaid:sysaid-endusers-api
+  name: SysAid EndUsers API
+  description: The EndUsers API from SysAid — 8 operation(s) for endusers.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - EndUsers
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-endusers-api-openapi.yml
+- aid: sysaid:sysaid-groups-api
+  name: SysAid Groups API
+  description: The Groups API from SysAid — 4 operation(s) for groups.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-groups-api-openapi.yml
+- aid: sysaid:sysaid-licensemanager-api
+  name: SysAid LicenseManager API
+  description: The LicenseManager API from SysAid — 2 operation(s) for licensemanager.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - LicenseManager
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-licensemanager-api-openapi.yml
+- aid: sysaid:sysaid-relateditems-api
+  name: SysAid RelatedItems API
+  description: The RelatedItems API from SysAid — 3 operation(s) for relateditems.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - RelatedItems
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-relateditems-api-openapi.yml
+- aid: sysaid:sysaid-servicerecords-api
+  name: SysAid ServiceRecords API
+  description: The ServiceRecords API from SysAid — 6 operation(s) for servicerecords.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - ServiceRecords
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-servicerecords-api-openapi.yml
+- aid: sysaid:sysaid-templates-api
+  name: SysAid Templates API
+  description: The Templates API from SysAid — 3 operation(s) for templates.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Templates
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-templates-api-openapi.yml
+- aid: sysaid:sysaid-utilities-api
+  name: SysAid Utilities API
+  description: The Utilities API from SysAid — 3 operation(s) for utilities.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Utilities
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-utilities-api-openapi.yml
+- aid: sysaid:sysaid-webhooks-api
+  name: SysAid Webhooks API
+  description: The Webhooks API from SysAid — 5 operation(s) for webhooks.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-webhooks-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/sysaid-agentic-access.yml
