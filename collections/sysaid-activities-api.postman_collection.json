@@ -1,0 +1,301 @@
+{
+  "item": [
+    {
+      "id": "c7199a40-8fcc-48c3-9a3d-c67a77628ae2",
+      "name": "Activities",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a27a9660-ea55-48d1-a9b9-fd68dd36d3b9",
+          "name": "Log time-tracked activity",
+          "request": {
+            "name": "Log time-tracked activity",
+            "description": {},
+            "url": {
+              "path": [
+                "addservicerecordactivity"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4bdaeaf4-ddc5-4fed-94d3-50759dce2b62",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "addservicerecordactivity"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "84575e83-d364-4a93-bbe7-da4ea633fbad",
+          "name": "Retrieve activities (paginated)",
+          "request": {
+            "name": "Retrieve activities (paginated)",
+            "description": {},
+            "url": {
+              "path": [
+                "searchservicerecordactivities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "be03986b-b458-4136-bc70-158e7abfee02",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "searchservicerecordactivities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cce96f28-80cc-4115-ac5b-0a3dfa592da3",
+          "name": "Add internal or public note",
+          "request": {
+            "name": "Add internal or public note",
+            "description": {},
+            "url": {
+              "path": [
+                "addservicerecordnote"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b66b83e8-919f-4cf4-bbad-7a7dbc636130",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "addservicerecordnote"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3219c30b-8242-43e1-940a-260339e9fc48",
+          "name": "Send email notification",
+          "request": {
+            "name": "Send email notification",
+            "description": {},
+            "url": {
+              "path": [
+                "sendservicerecordmessage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "16d9952c-0467-4ab8-8f87-220343fa9129",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sendservicerecordmessage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://your-account.sysaidit.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2eeddc3b-7520-4ca1-ba2b-da5485ca849e",
+    "name": "SysAid REST ActionItems Activities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for SysAid ITSM. Manage service records (incidents, requests, problems, changes), users (agents and end users), groups, companies, assets, configuration items (CIs), templates, attachments, webhooks (beta), and license manager records. Authentication uses Client Credentials to mint short-lived application access tokens. Source: https://developers.sysaid.com/\n\nContact Support:\n Name: SysAid",
+      "type": "text/plain"
+    }
+  }
+}

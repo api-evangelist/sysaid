@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems Activities API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Activities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Log time-tracked activity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addservicerecordactivity"
+          },
+          "docs": "Log time-tracked activity"
+        },
+        {
+          "info": {
+            "name": "Retrieve activities (paginated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/searchservicerecordactivities"
+          },
+          "docs": "Retrieve activities (paginated)"
+        },
+        {
+          "info": {
+            "name": "Add internal or public note",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addservicerecordnote"
+          },
+          "docs": "Add internal or public note"
+        },
+        {
+          "info": {
+            "name": "Send email notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/sendservicerecordmessage"
+          },
+          "docs": "Send email notification"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems Companies API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Companies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcompanies"
+          },
+          "docs": "List companies"
+        },
+        {
+          "info": {
+            "name": "Create company",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createcompany"
+          },
+          "docs": "Create company"
+        },
+        {
+          "info": {
+            "name": "Retrieve company by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcompanybyid"
+          },
+          "docs": "Retrieve company by ID"
+        },
+        {
+          "info": {
+            "name": "Update company",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updatecompanybyid"
+          },
+          "docs": "Update company"
+        },
+        {
+          "info": {
+            "name": "Remove company",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deletecompanybyid"
+          },
+          "docs": "Remove company"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

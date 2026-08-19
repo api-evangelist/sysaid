@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems RelatedItems API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "RelatedItems",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List related items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getservicerecordrelateditems"
+          },
+          "docs": "List related items"
+        },
+        {
+          "info": {
+            "name": "Link KB articles",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addkbarticletoservicerecord"
+          },
+          "docs": "Link KB articles"
+        },
+        {
+          "info": {
+            "name": "Unlink KB articles",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteservicerecordknowledgebaserelateditem"
+          },
+          "docs": "Unlink KB articles"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,301 @@
+{
+  "item": [
+    {
+      "id": "09592d71-52d7-4d3b-b5df-5a32253387d2",
+      "name": "Auth",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "06294cd8-7cb8-4745-b254-dbf516ff51b8",
+          "name": "Create app credentials",
+          "request": {
+            "name": "Create app credentials",
+            "description": {},
+            "url": {
+              "path": [
+                "createapplicationkey"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "39940751-ceef-41f3-8085-20ab21c97103",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "createapplicationkey"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8449a565-8403-4703-893c-68ae72479bf9",
+          "name": "Obtain access token",
+          "request": {
+            "name": "Obtain access token",
+            "description": {},
+            "url": {
+              "path": [
+                "generateaccesstoken"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c8ef5af7-b0c5-4343-b10c-a2de700f2232",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "generateaccesstoken"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "188cf2e8-ae13-441c-8117-7fd2a09033f7",
+          "name": "Remove app credentials",
+          "request": {
+            "name": "Remove app credentials",
+            "description": {},
+            "url": {
+              "path": [
+                "deleteapplicationkey"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5d7244e9-2f46-498a-a2e0-97587163c018",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "deleteapplicationkey"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "568ec0ff-15d6-4db6-b9fa-4818b9d9f6de",
+          "name": "List app keys by account",
+          "request": {
+            "name": "List app keys by account",
+            "description": {},
+            "url": {
+              "path": [
+                "getapplicationsbyaccountid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8c54ec7a-2e62-436a-ba95-d87f54337529",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getapplicationsbyaccountid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://your-account.sysaidit.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9c269257-9623-4621-8159-7757b1b07a83",
+    "name": "SysAid REST ActionItems Auth API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for SysAid ITSM. Manage service records (incidents, requests, problems, changes), users (agents and end users), groups, companies, assets, configuration items (CIs), templates, attachments, webhooks (beta), and license manager records. Authentication uses Client Credentials to mint short-lived application access tokens. Source: https://developers.sysaid.com/\n\nContact Support:\n Name: SysAid",
+      "type": "text/plain"
+    }
+  }
+}

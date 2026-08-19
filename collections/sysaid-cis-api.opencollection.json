@@ -1,0 +1,123 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems CIs API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CIs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List CIs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcis"
+          },
+          "docs": "List CIs"
+        },
+        {
+          "info": {
+            "name": "Create CI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createci"
+          },
+          "docs": "Create CI"
+        },
+        {
+          "info": {
+            "name": "Retrieve CI by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcibyid"
+          },
+          "docs": "Retrieve CI by ID"
+        },
+        {
+          "info": {
+            "name": "Update CI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updatecibyid"
+          },
+          "docs": "Update CI"
+        },
+        {
+          "info": {
+            "name": "Remove CI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deletecibyid"
+          },
+          "docs": "Remove CI"
+        },
+        {
+          "info": {
+            "name": "List CI types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcitypes"
+          },
+          "docs": "List CI types"
+        },
+        {
+          "info": {
+            "name": "Retrieve CI relations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getcirelationsbyid"
+          },
+          "docs": "Retrieve CI relations"
+        },
+        {
+          "info": {
+            "name": "Create CI relation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createcirelation"
+          },
+          "docs": "Create CI relation"
+        },
+        {
+          "info": {
+            "name": "Remove CI relation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deletecirelation"
+          },
+          "docs": "Remove CI relation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

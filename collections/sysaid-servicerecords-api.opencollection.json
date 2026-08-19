@@ -1,0 +1,90 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems ServiceRecords API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ServiceRecords",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createservicerecord"
+          },
+          "docs": "Create ticket"
+        },
+        {
+          "info": {
+            "name": "Retrieve ticket details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getservicerecordbyid"
+          },
+          "docs": "Retrieve ticket details"
+        },
+        {
+          "info": {
+            "name": "Update ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateservicerecord"
+          },
+          "docs": "Update ticket"
+        },
+        {
+          "info": {
+            "name": "Search tickets by parameters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/searchservicerecords"
+          },
+          "docs": "Search tickets by parameters"
+        },
+        {
+          "info": {
+            "name": "Remove ticket permanently",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteservicerecord"
+          },
+          "docs": "Remove ticket permanently"
+        },
+        {
+          "info": {
+            "name": "Mark ticket resolved",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/resolveservicerecord"
+          },
+          "docs": "Mark ticket resolved"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

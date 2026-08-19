@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems Templates API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get template by service record ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getsrtemplatebysrid"
+          },
+          "docs": "Get template by service record ID"
+        },
+        {
+          "info": {
+            "name": "Get template by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getsrtemplatebyid"
+          },
+          "docs": "Get template by ID"
+        },
+        {
+          "info": {
+            "name": "Search templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/searchsrtemplates"
+          },
+          "docs": "Search templates"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

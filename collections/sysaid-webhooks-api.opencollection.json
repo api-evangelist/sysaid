@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems Webhooks API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create webhook subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createwebhook"
+          },
+          "docs": "Create webhook subscription"
+        },
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getwebhooksbyaccountid"
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Test webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/simulatewebhookevent"
+          },
+          "docs": "Test webhook"
+        },
+        {
+          "info": {
+            "name": "Retrieve webhook details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getwebhooksubscriberbyid"
+          },
+          "docs": "Retrieve webhook details"
+        },
+        {
+          "info": {
+            "name": "Remove webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deletewebhooksubscriberbyid"
+          },
+          "docs": "Remove webhook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

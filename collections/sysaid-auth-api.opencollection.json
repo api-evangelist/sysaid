@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems Auth API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Auth",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create app credentials",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createapplicationkey"
+          },
+          "docs": "Create app credentials"
+        },
+        {
+          "info": {
+            "name": "Obtain access token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/generateaccesstoken"
+          },
+          "docs": "Obtain access token"
+        },
+        {
+          "info": {
+            "name": "Remove app credentials",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteapplicationkey"
+          },
+          "docs": "Remove app credentials"
+        },
+        {
+          "info": {
+            "name": "List app keys by account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getapplicationsbyaccountid"
+          },
+          "docs": "List app keys by account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

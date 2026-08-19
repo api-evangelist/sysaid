@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems LicenseManager API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "LicenseManager",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List license contracts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getlicensemanagercontracts"
+          },
+          "docs": "List license contracts"
+        },
+        {
+          "info": {
+            "name": "Create license contract",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createlicensemanagercontract"
+          },
+          "docs": "Create license contract"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

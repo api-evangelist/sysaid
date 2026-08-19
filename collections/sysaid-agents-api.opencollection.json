@@ -1,0 +1,112 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems Agents API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Agents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List agents (paginated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getagents"
+          },
+          "docs": "List agents (paginated)"
+        },
+        {
+          "info": {
+            "name": "Create new agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createagent"
+          },
+          "docs": "Create new agent"
+        },
+        {
+          "info": {
+            "name": "Retrieve agent by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getagent"
+          },
+          "docs": "Retrieve agent by ID"
+        },
+        {
+          "info": {
+            "name": "Update agent details",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateagent"
+          },
+          "docs": "Update agent details"
+        },
+        {
+          "info": {
+            "name": "Remove agent permanently",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteagent"
+          },
+          "docs": "Remove agent permanently"
+        },
+        {
+          "info": {
+            "name": "Add agent to groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addagenttogroups"
+          },
+          "docs": "Add agent to groups"
+        },
+        {
+          "info": {
+            "name": "Remove agent from groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/removeagentfromgroups"
+          },
+          "docs": "Remove agent from groups"
+        },
+        {
+          "info": {
+            "name": "Convert agent to end user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/convertagenttoenduser"
+          },
+          "docs": "Convert agent to end user"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems Assets API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getassets"
+          },
+          "docs": "List assets"
+        },
+        {
+          "info": {
+            "name": "Create asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createasset"
+          },
+          "docs": "Create asset"
+        },
+        {
+          "info": {
+            "name": "Retrieve asset by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getassetbyid"
+          },
+          "docs": "Retrieve asset by ID"
+        },
+        {
+          "info": {
+            "name": "Update asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateasset"
+          },
+          "docs": "Update asset"
+        },
+        {
+          "info": {
+            "name": "Remove asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteasset"
+          },
+          "docs": "Remove asset"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

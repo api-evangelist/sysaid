@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ActionItems",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List action items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getservicerecordactionitems"
+          },
+          "docs": "List action items"
+        },
+        {
+          "info": {
+            "name": "Update action item status",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateservicerecordactionitemstatus"
+          },
+          "docs": "Update action item status"
+        },
+        {
+          "info": {
+            "name": "Create ad-hoc action item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addadhocactionitem"
+          },
+          "docs": "Create ad-hoc action item"
+        },
+        {
+          "info": {
+            "name": "Remove action item",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteadhocactionitem"
+          },
+          "docs": "Remove action item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

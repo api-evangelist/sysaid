@@ -1,0 +1,112 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SysAid REST ActionItems EndUsers API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "EndUsers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List end users (paginated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getendusers"
+          },
+          "docs": "List end users (paginated)"
+        },
+        {
+          "info": {
+            "name": "Create new end user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/createenduser"
+          },
+          "docs": "Create new end user"
+        },
+        {
+          "info": {
+            "name": "Retrieve end user by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://your-account.sysaidit.com/getenduser"
+          },
+          "docs": "Retrieve end user by ID"
+        },
+        {
+          "info": {
+            "name": "Update end user details",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://your-account.sysaidit.com/updateenduser"
+          },
+          "docs": "Update end user details"
+        },
+        {
+          "info": {
+            "name": "Remove end user permanently",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://your-account.sysaidit.com/deleteenduser"
+          },
+          "docs": "Remove end user permanently"
+        },
+        {
+          "info": {
+            "name": "Add end user to groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/addendusertogroups"
+          },
+          "docs": "Add end user to groups"
+        },
+        {
+          "info": {
+            "name": "Remove end user from groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/removeenduserfromgroups"
+          },
+          "docs": "Remove end user from groups"
+        },
+        {
+          "info": {
+            "name": "Convert end user to agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://your-account.sysaidit.com/convertendusertoagent"
+          },
+          "docs": "Convert end user to agent"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
