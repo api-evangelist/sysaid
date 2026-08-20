@@ -24,6 +24,12 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sysaid.png
 tags:
   - ITSM
   - Help Desk
+  - Asset Management
+  - Ticketing
+  - Service Desk
+tags_raw:
+  - ITSM
+  - Help Desk
   - IT Service Management
   - Asset Management
   - Ticketing
@@ -46,6 +52,12 @@ apis:
   - Service Records
   - Tickets
   - Assets
+  - User
+  - Workflows
+  tags_raw:
+  - Service Records
+  - Tickets
+  - Assets
   - Users
   - Workflows
   properties:
@@ -59,6 +71,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - Action Items
+  tags_raw:
   - ActionItems
   properties:
   - type: OpenAPI
@@ -109,6 +123,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - Authentication
+  tags_raw:
   - Auth
   properties:
   - type: OpenAPI
@@ -119,6 +135,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - CIS
+  tags_raw:
   - CIs
   properties:
   - type: OpenAPI
@@ -139,6 +157,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - End Users
+  tags_raw:
   - EndUsers
   properties:
   - type: OpenAPI
@@ -149,6 +169,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -169,6 +191,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - Related-items
+  tags_raw:
   - RelatedItems
   properties:
   - type: OpenAPI
@@ -179,6 +203,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - Service Records
+  tags_raw:
   - ServiceRecords
   properties:
   - type: OpenAPI
@@ -209,6 +235,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
