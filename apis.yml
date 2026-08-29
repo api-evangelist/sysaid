@@ -8,6 +8,18 @@ description: >-
   SysAid exposes a REST API with Client Credentials authentication issuing
   short-lived tokens for managing service records, users, assets, and more.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
