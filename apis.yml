@@ -36,7 +36,6 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sysaid.png
 tags:
   - ITSM
   - Help Desk
-  - IT Service Management
   - Asset Management
   - Ticketing
   - Service Desk
@@ -84,7 +83,7 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
-  - ActionItems
+  - Action Items
   tags_raw:
   - ActionItems
   properties:
@@ -148,7 +147,7 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
-  - CIs
+  - CIS
   tags_raw:
   - CIs
   properties:
@@ -204,7 +203,7 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
-  - RelatedItems
+  - Related-items
   tags_raw:
   - RelatedItems
   properties:
@@ -216,7 +215,7 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
-  - ServiceRecords
+  - Service Records
   tags_raw:
   - ServiceRecords
   properties:
