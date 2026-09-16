@@ -78,18 +78,6 @@ apis:
     url: https://documentation.sysaid.com/docs/rest-api-guide
   - type: Authentication Guide
     url: https://developers.sysaid.com/docs/authentication-guide
-- aid: sysaid:sysaid-actionitems-api
-  name: SysAid ActionItems API
-  description: The ActionItems API from SysAid — 4 operation(s) for actionitems.
-  humanURL: https://developers.sysaid.com/docs/authentication-guide
-  baseURL: https://your-account.sysaidit.com
-  tags:
-  - Action Items
-  tags_raw:
-  - ActionItems
-  properties:
-  - type: OpenAPI
-    url: openapi/sysaid-actionitems-api-openapi.yml
 - aid: sysaid:sysaid-activities-api
   name: SysAid Activities API
   description: The Activities API from SysAid — 4 operation(s) for activities.
@@ -142,18 +130,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/sysaid-auth-api-openapi.yml
-- aid: sysaid:sysaid-cis-api
-  name: SysAid CIs API
-  description: The CIs API from SysAid — 9 operation(s) for cis.
-  humanURL: https://developers.sysaid.com/docs/authentication-guide
-  baseURL: https://your-account.sysaidit.com
-  tags:
-  - CIS
-  tags_raw:
-  - CIs
-  properties:
-  - type: OpenAPI
-    url: openapi/sysaid-cis-api-openapi.yml
 - aid: sysaid:sysaid-companies-api
   name: SysAid Companies API
   description: The Companies API from SysAid — 5 operation(s) for companies.
@@ -164,18 +140,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/sysaid-companies-api-openapi.yml
-- aid: sysaid:sysaid-endusers-api
-  name: SysAid EndUsers API
-  description: The EndUsers API from SysAid — 8 operation(s) for endusers.
-  humanURL: https://developers.sysaid.com/docs/authentication-guide
-  baseURL: https://your-account.sysaidit.com
-  tags:
-  - End Users
-  tags_raw:
-  - EndUsers
-  properties:
-  - type: OpenAPI
-    url: openapi/sysaid-endusers-api-openapi.yml
 - aid: sysaid:sysaid-groups-api
   name: SysAid Groups API
   description: The Groups API from SysAid — 4 operation(s) for groups.
@@ -198,18 +162,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/sysaid-licensemanager-api-openapi.yml
-- aid: sysaid:sysaid-relateditems-api
-  name: SysAid RelatedItems API
-  description: The RelatedItems API from SysAid — 3 operation(s) for relateditems.
-  humanURL: https://developers.sysaid.com/docs/authentication-guide
-  baseURL: https://your-account.sysaidit.com
-  tags:
-  - Related-items
-  tags_raw:
-  - RelatedItems
-  properties:
-  - type: OpenAPI
-    url: openapi/sysaid-relateditems-api-openapi.yml
 - aid: sysaid:sysaid-servicerecords-api
   name: SysAid ServiceRecords API
   description: The ServiceRecords API from SysAid — 6 operation(s) for servicerecords.
@@ -254,6 +206,46 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/sysaid-webhooks-api-openapi.yml
+- aid: sysaid:sysaid-action-items-api
+  name: SysAid Action Items API
+  description: The Action Items API from SysAid — 4 operation(s) for action items.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Action Items
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-action-items-api-openapi.yml
+- aid: sysaid:sysaid-c-is-api
+  name: SysAid C Is API
+  description: The C Is API from SysAid — 9 operation(s) for c is.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - C Is
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-c-is-api-openapi.yml
+- aid: sysaid:sysaid-end-users-api
+  name: SysAid End Users API
+  description: The End Users API from SysAid — 8 operation(s) for end users.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - End Users
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-end-users-api-openapi.yml
+- aid: sysaid:sysaid-related-items-api
+  name: SysAid Related Items API
+  description: The Related Items API from SysAid — 3 operation(s) for related items.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - Related Items
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-related-items-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/sysaid-agentic-access.yml
