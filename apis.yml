@@ -206,6 +206,16 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/sysaid-webhooks-api-openapi.yml
+- aid: sysaid:sysaid-cis-api
+  name: SysAid C Is API
+  description: The CIs API from SysAid — 9 operation(s) for cis.
+  humanURL: https://developers.sysaid.com/docs/authentication-guide
+  baseURL: https://your-account.sysaidit.com
+  tags:
+  - CIs
+  properties:
+  - type: OpenAPI
+    url: openapi/sysaid-cis-api-openapi.yml
 - aid: sysaid:sysaid-action-items-api
   name: SysAid Action Items API
   description: The Action Items API from SysAid — 4 operation(s) for action items.
@@ -216,16 +226,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/sysaid-action-items-api-openapi.yml
-- aid: sysaid:sysaid-c-is-api
-  name: SysAid C Is API
-  description: The C Is API from SysAid — 9 operation(s) for c is.
-  humanURL: https://developers.sysaid.com/docs/authentication-guide
-  baseURL: https://your-account.sysaidit.com
-  tags:
-  - C Is
-  properties:
-  - type: OpenAPI
-    url: openapi/sysaid-c-is-api-openapi.yml
 - aid: sysaid:sysaid-end-users-api
   name: SysAid End Users API
   description: The End Users API from SysAid — 8 operation(s) for end users.
