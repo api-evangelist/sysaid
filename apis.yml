@@ -212,6 +212,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - CIS
+  tags_raw:
   - CIs
   properties:
   - type: OpenAPI
@@ -242,6 +244,8 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - Related-items
+  tags_raw:
   - Related Items
   properties:
   - type: OpenAPI
