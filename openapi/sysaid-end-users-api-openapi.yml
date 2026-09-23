@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: SysAid REST ActionItems EndUsers API
+  title: SysAid REST End Users API
   description: 'REST API for SysAid ITSM. Manage service records (incidents, requests, problems, changes), users (agents and end users), groups, companies, assets, configuration items (CIs), templates, attachments, webhooks (beta), and license manager records. Authentication uses Client Credentials to mint short-lived application access tokens. Source: https://developers.sysaid.com/'
   version: '1.0'
   contact:
@@ -12,12 +12,12 @@ servers:
 security:
 - BearerAuth: []
 tags:
-- name: EndUsers
+- name: End Users
 paths:
   /getendusers:
     get:
       tags:
-      - EndUsers
+      - End Users
       summary: List end users (paginated)
       operationId: getEndUsers
       responses:
@@ -26,7 +26,7 @@ paths:
   /createenduser:
     post:
       tags:
-      - EndUsers
+      - End Users
       summary: Create new end user
       operationId: createEndUser
       responses:
@@ -35,7 +35,7 @@ paths:
   /getenduser:
     get:
       tags:
-      - EndUsers
+      - End Users
       summary: Retrieve end user by ID
       operationId: getEndUser
       responses:
@@ -44,7 +44,7 @@ paths:
   /updateenduser:
     put:
       tags:
-      - EndUsers
+      - End Users
       summary: Update end user details
       operationId: updateEndUser
       responses:
@@ -53,7 +53,7 @@ paths:
   /deleteenduser:
     delete:
       tags:
-      - EndUsers
+      - End Users
       summary: Remove end user permanently
       operationId: deleteEndUser
       responses:
@@ -62,7 +62,7 @@ paths:
   /addendusertogroups:
     post:
       tags:
-      - EndUsers
+      - End Users
       summary: Add end user to groups
       operationId: addEndUserToGroups
       responses:
@@ -71,7 +71,7 @@ paths:
   /removeenduserfromgroups:
     post:
       tags:
-      - EndUsers
+      - End Users
       summary: Remove end user from groups
       operationId: removeEndUserFromGroups
       responses:
@@ -80,7 +80,7 @@ paths:
   /convertendusertoagent:
     post:
       tags:
-      - EndUsers
+      - End Users
       summary: Convert end user to agent
       operationId: convertEndUserToAgent
       responses:

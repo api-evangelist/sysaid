@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: SysAid REST ActionItems CIs API
+  title: SysAid REST C Is API
   description: 'REST API for SysAid ITSM. Manage service records (incidents, requests, problems, changes), users (agents and end users), groups, companies, assets, configuration items (CIs), templates, attachments, webhooks (beta), and license manager records. Authentication uses Client Credentials to mint short-lived application access tokens. Source: https://developers.sysaid.com/'
   version: '1.0'
   contact:
