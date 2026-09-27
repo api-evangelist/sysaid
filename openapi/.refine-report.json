@@ -22,15 +22,15 @@
     "sysaid-webhooks-api-openapi.yml"
   ],
   "archived": [
-    "deleted 4 superseded output(s) from the previous generation"
+    "deleted 3 superseded output(s) from the previous generation"
   ],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "sysaid-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "superseded outputs removed: sysaid-action-items-api-openapi.yml, sysaid-c-is-api-openapi.yml, sysaid-end-users-api-openapi.yml, sysaid-related-items-api-openapi.yml",
-    "apis.yml register: written (+4 apis, 17 total)"
+    "superseded outputs removed: sysaid-action-items-api-openapi.yml, sysaid-end-users-api-openapi.yml, sysaid-related-items-api-openapi.yml",
+    "apis.yml register: written (+3 apis, 17 total)"
   ],
   "skipped": [
     "sysaid-action-items-api-openapi.yml: previously refined output, superseded by openapi/_original/",
@@ -39,7 +39,7 @@
     "sysaid-assets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "sysaid-attachments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "sysaid-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "sysaid-c-is-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sysaid-cis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "sysaid-companies-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "sysaid-end-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "sysaid-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
