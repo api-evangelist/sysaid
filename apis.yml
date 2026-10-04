@@ -244,11 +244,16 @@ apis:
   humanURL: https://developers.sysaid.com/docs/authentication-guide
   baseURL: https://your-account.sysaidit.com
   tags:
+  - Related-items
+  tags_raw:
   - Related Items
   properties:
   - type: OpenAPI
     url: openapi/sysaid-related-items-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/sysaid-capability-edges.yml
+    name: SysAid Business Capability Map
   - type: AgenticAccess
     url: agentic-access/sysaid-agentic-access.yml
   - type: VulnerabilityDisclosure
