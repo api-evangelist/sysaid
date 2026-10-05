@@ -1,0 +1,64 @@
+slug: sysaid
+provider: SysAid
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 5
+edges:
+- tag: ServiceRecords
+  spec_file: sysaid-servicerecords-api-openapi.yml
+  capability_id: BC-600.30
+  capability_id_l1: BC-600
+  capability_name: IT Service Management
+  confidence: 0.95
+  evidence: POST /createservicerecord Create ticket; POST /resolveservicerecord Mark ticket resolved
+  reason: Ticket lifecycle for incidents, requests, problems and changes is exactly IT Service Management.
+- tag: Action Items
+  spec_file: sysaid-action-items-api-openapi.yml
+  capability_id: BC-600.30
+  capability_id_l1: BC-600
+  capability_name: IT Service Management
+  confidence: 0.85
+  evidence: 'GET /getservicerecordactionitems  List action items; PUT /updateservicerecordactionitemstatus;
+    doc: "Manage service records (incidents, requests, problems, changes)"'
+  reason: Action items are sub-tasks attached to ITSM service records (incidents/requests/problems/changes)
+    in a help-desk platform, which is squarely IT Service Management.
+- tag: Activities
+  spec_file: sysaid-activities-api-openapi.yml
+  capability_id: BC-600.30
+  capability_id_l1: BC-600
+  capability_name: IT Service Management
+  confidence: 0.8
+  evidence: POST /addservicerecordactivity Log time-tracked activity; POST /addservicerecordnote Add internal
+    or public note
+  reason: Operations log work activity and notes against ITSM service records (incidents/requests), i.e.
+    ticket handling within IT Service Management.
+- tag: Templates
+  spec_file: sysaid-templates-api-openapi.yml
+  capability_id: BC-600.30
+  capability_id_l1: BC-600
+  capability_name: IT Service Management
+  confidence: 0.72
+  evidence: '"Get template by service record ID"; "REST API for SysAid ITSM. Manage service records (incidents,
+    requests, problems, changes)"'
+  reason: Templates here are service-record templates inside an ITSM help-desk platform, used to pre-fill
+    incidents/requests/changes. That is squarely IT Service Management tooling, not document or content
+    management. Confidence held below 0.8 because the tag itself is only a supporting metadata surface
+    for the ticketing capability.
+- tag: CIs
+  spec_file: sysaid-cis-api-openapi.yml
+  capability_id: BC-600.30
+  capability_id_l1: BC-600
+  capability_name: IT Service Management
+  confidence: 0.7
+  evidence: GET /getcis List CIs; POST /createcirelation Create CI relation
+  reason: Configuration item and CI-relationship management (CMDB) is a core ITSM practice alongside incident/change
+    in this platform.
